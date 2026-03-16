@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Puzzle Game</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 flex justify-center items-center min-h-screen">
+
+<div class="bg-white p-6 rounded-xl shadow w-[900px]">
+    <div class="text-center mb-6">
+        <button id="startBtn"
+        class="bg-green-500 text-white px-6 py-2 rounded">
+        Bắt đầu
+        </button>
+        <p id="winText" class="text-center text-green-500 font-bold mt-2"></p>
+    </div>
+
+    <div class="flex gap-6">
+        <div id="board"
+        class="grid grid-cols-4 gap-4">
+        </div>
+        <div class="w-40">
+            <div class="bg-green-100 p-4 rounded text-center mb-4">
+                <p>Đồng Hồ</p>
+                <h2 id="timer" class="text-2xl font-bold">00:00</h2>
+            </div>
+            <div class="bg-gray-100 p-4 rounded text-center">
+                <p class="text-sm mb-2">Hướng Dẫn</p>
+
+                <div class="grid grid-cols-3 gap-2 text-sm">
+
+                    <div></div>
+                    <button>↑</button>
+                    <div></div>
+
+                    <button>←</button>
+                    <button>↓</button>
+                    <button>→</button>
+
+                </div>
+
+                <div class="mt-3 grid grid-cols-3 gap-2 text-sm">
+
+                    <div></div>
+                    <button>W</button>
+                    <div></div>
+
+                    <button>A</button>
+                    <button>S</button>
+                    <button>D</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mt-6">
+        <h3 class="text-center mb-2">Lịch Sử Lượt Chơi</h3>
+
+        <table class="w-full border">
+
+            <thead class="bg-gray-200">
+                <tr>
+                    <th>#</th>
+                    <th>Bước Đi</th>
+                    <th>Thời Gian</th>
+                </tr>
+            </thead>
+
+            <tbody id="history"></tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
